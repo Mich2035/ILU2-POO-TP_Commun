@@ -26,17 +26,17 @@ class RestaurantTest {
 	void testDonnerPossibilites() {
 		int[] possibilites = restaurant.donnerPossibilites(formulaire);
 		int[] expected = { 0, 2, 3, 0, 0, 0 };
-		assertArrayEquals(expected, possibilites,"Les tables numeros 2 et 3 devraient pouvoir être choisi");
+		assertArrayEquals(expected, possibilites,"Les tables numeros 2 et 3 devraient pouvoir ï¿½tre choisi");
 
 		int[] expected2 = { 0, 2, 3, 0, 0, 0, 7};
 		restaurant.ajouterTable(3);
 		possibilites = restaurant.donnerPossibilites(formulaire);
-		assertArrayEquals(expected2, possibilites,"Les tables numeros 2, 3 et 7 devraient pouvoir être choisi");
+		assertArrayEquals(expected2, possibilites,"Les tables numeros 2, 3 et 7 devraient pouvoir ï¿½tre choisi");
 	}
 
 	@Test
 	void testReserver() {
-		ReservationRestaurant reservation = (ReservationRestaurant) restaurant.reserver(3, formulaire);
+		Reservation reservation = (Reservation) restaurant.reserver(3, formulaire);
 		assertEquals(MESSAGE_RESA,reservation.toString(), "la sortie console devrait etre : " + MESSAGE_RESA);
 	}
 
